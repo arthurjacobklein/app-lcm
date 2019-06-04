@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  get 'users/create'
   root to: 'products#index'
   resources :products
   resources :order_items
