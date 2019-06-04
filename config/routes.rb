@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :brands
   root to: 'products#index'
   resources :products
   resources :order_items
