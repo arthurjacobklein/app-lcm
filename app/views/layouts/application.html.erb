@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>Lcm</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/meanmenu.css">
+    <link rel="stylesheet" href="assets/stylesheets/shortcodes/shortcode.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <link rel="stylesheet" href="assets/stylesheets/responsive.css">
+    <link rel="stylesheet" href="assets/stylesheets/header.css">
+    <link rel="stylesheet" href="assets/stylesheets/modal.css">
+    <link rel="stylesheet" href="assets/stylesheets/shop.css">
+    <link rel="stylesheet" href="assets/stylesheets/slider.css">
+    <link rel="stylesheet" href="assets/stylesheets/shortcode.css">
+    <link rel="stylesheet" href="assets/stylesheets/footer.css">
+    <link rel="stylesheet" href="assets/stylesheets/bundle.css">
+
   </head>
+    <%= render 'layouts/header' %>
 
   <body>
     <%= yield %>
-  </body>
+  </body> 
 </html>
