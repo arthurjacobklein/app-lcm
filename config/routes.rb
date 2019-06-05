@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
 
-  get 'home/index'
-  root to: 'home#index'
   resources :home, only: [:index]
+  resources :users, only: [:create]
+  root to: 'products#index'
   resources :products
   resources :order_items
   resources :cart, only: [:show]
