@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :brands
   root to: 'products#index'
   devise_for :user
   resources :user do
