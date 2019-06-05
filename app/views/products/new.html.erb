@@ -1,0 +1,18 @@
+
+
+<div class="card-body">
+  <p>Photo de la collection: </p>
+  <div class="d-flex flex-row mb-3">
+    <div class="img_product"> 
+    <div class="d-flex flex-column col-10 mb-2">
+      <%= form_tag(:controller => "products", :action => "create", :method => "post", :class => "load_images", multipart: true) do %>
+        <%= text_field_tag :title %>
+        <%= text_field_tag :description %>
+        <%= text_field_tag :price %>
+        <%= file_field_tag :product_images %>
+        <%= submit_tag "upload new photos ", class:"btn btn-success btn-sm" %>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>

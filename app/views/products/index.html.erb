@@ -1,5 +1,8 @@
 <h1>Products#index</h1>
 <p>Find me in app/views/products/index.html.erb</p>
+<div class="add_product">
+	<a href="products/new">ADD A NEW PRODUCT</a>
+</div>
 
   <% @products.each do |product| %>
    <p><%= product.title %> | <%= number_to_currency product.price %>
