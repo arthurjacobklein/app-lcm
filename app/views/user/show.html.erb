@@ -1,0 +1,36 @@
+<h1>Page Profil</h1>
+
+<p>Bienvenue sur la page d'ajout d'un avatar pour le User portant l'id : <%=@user.id%></p>
+<h3>Avatar actuel</h3>
+<%if @user.profilepicture.attached?%>
+  <%= image_tag @user.profilepicture, alt: 'profile_picture' %>
+<%else%>
+  <p>=== Il n'y a pas encore de photo de profil lié à cet utilisateur ===</p>
+<%end%>
+
+
+<h3>Changer de photo de profile ?</h3>
+<%= form_tag user_profile_pictures_path(@user), multipart: true do %>
+  <%= file_field_tag :profilepicture %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
+
+
+
+<div class="card-body">
+        <p>Profil picture: </p>
+        <div class="d-flex flex-row mb-3">
+          <div class="img_avatar"> <%if @user.profilepicture.attached?%>
+            <%= image_tag @user.profilepicture, alt: 'profilepicture', id: "profilepicture" %></div>
+          <%else%>
+          <p> There is no profile picture linked to this user yet </p>
+          <%end%>
+          <%= form_tag user_profile_pictures_path(@user), multipart: true do %>
+          <div class="d-flex flex-column col-10 mb-2">
+
+            <%= file_field_tag :profilepicture, class:"btn" %>
+            <%= submit_tag "Change picture", class:"btn btn-success btn-sm" %>
+          </div>
+	</div>
+	</div>
+        <% end %>
