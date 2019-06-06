@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_06_04_165215) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -40,6 +41,8 @@ ActiveRecord::Schema.define(version: 2019_06_04_165215) do
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
+
+=======
 
   create_table "brands", force: :cascade do |t|
     t.string "email", default: "", null: false
