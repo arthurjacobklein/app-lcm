@@ -8,6 +8,18 @@
 require 'faker'
 
 20.times do
+  User.create!(
+    email: Faker::Internet.email,
+    password: "test33"
+  )
+end
+
+
+puts 'Users created '
+
+
+
+20.times do
   Product.create!(
     title: Faker::Creature::Cat.name + " " + Faker::Creature::Cat.name,
     description: "lorem ipsum",
@@ -16,5 +28,4 @@ require 'faker'
   )
 end
 
-
-puts 'products created '
+puts '20 products created'

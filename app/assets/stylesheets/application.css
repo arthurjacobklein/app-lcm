@@ -65,3 +65,11 @@
   color: white;
   border-color: transparent;
 }
+
+.slider-area.style-1 {
+  height: 100%;
+}
+
+.slider-area.style-1.d-flex.align-items-center {
+  background-image: url("https://i.imgur.com/HXr0AhK.jpg");
+}
