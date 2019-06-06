@@ -1,4 +1,5 @@
 
+<!-- FORM TO ADD A NEW PRODUCT-->
 
 <div class="card-body">
   <p>Photo de la collection: </p>
@@ -12,7 +13,7 @@
         <%= text_field_tag :reference %>
         <%= number_field_tag :quantity %>
         <%= text_field_tag :gender %>
-        <%= file_field_tag :product_images %>
+        <%= file_field_tag :product_images, :multiple => true, direct_upload: true %>
         <%= submit_tag "upload new photos ", class:"btn btn-success btn-sm" %>
       <% end %>
     </div>

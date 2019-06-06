@@ -4,7 +4,10 @@
 <div class="img_product"> 
             <p><%=  @product.title %></p>
            <p><%=  @product.description %></p>
-            <p><%= @product.product_images.each do |i| %>
-                <%= image_tag(i) %></p>
-<% end %>
+            <p><% @product.product_images.each do |i| %>
+                <%= image_tag (i) %>
+<% end %></p>
 </div>
+
+
+

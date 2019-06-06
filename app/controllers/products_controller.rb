@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
   def create
   	@product = Product.new(product_params)
   	if @product.save
+  	   @product.product_images.attach(params[:product_images])
 		redirect_to (product_path(@product))
     else
     	render new_product_path
