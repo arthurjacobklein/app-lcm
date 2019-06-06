@@ -1,7 +1,10 @@
 
+<!-- SHOW -->
 
 <div class="img_product"> 
             <p><%=  @product.title %></p>
            <p><%=  @product.description %></p>
-            <p><%=  @product.product_images %></p>
+            <p><%= @product.product_images.each do |i| %>
+                <%= image_tag(i) %></p>
+<% end %>
 </div>
