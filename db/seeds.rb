@@ -16,3 +16,16 @@ end
 
 
 puts 'Users created '
+
+
+
+20.times do
+  Product.create!(
+    title: Faker::Creature::Cat.name + " " + Faker::Creature::Cat.name,
+    description: "lorem ipsum",
+    price: rand(0..100).to_f,
+
+  )
+end
+
+puts '20 products created'

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :user do
     resources :profile_pictures, only: [:create]
   end
-  resources :products
+  resources :products 
   resources :order_items
   resources :cart, only: [:show]
 
