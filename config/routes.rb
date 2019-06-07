@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :users, only: [:create]
 
-  root to: 'products#index'
+  root to: 'home#index'
   devise_for :user
   resources :user do
     resources :profile_pictures, only: [:create]
