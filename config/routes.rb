@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
   devise_for :user
-  resources :user do
+  resources :users do
     resources :profile_pictures, only: [:create]
   end
   resources :products
