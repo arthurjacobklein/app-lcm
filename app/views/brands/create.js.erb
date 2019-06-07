@@ -1,0 +1,6 @@
+$("#mynewbrand").modal('hide');
+$(".brand_company_name").val('');
+$(".brand_website").val('');
+
+$("#container_brands").prepend('<%= j render @brand %>');
+$("#brand_<%= @brand.id %>").hide().fadeIn(1000);

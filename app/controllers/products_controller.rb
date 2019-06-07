@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+   before_action :authenticate_brand!
 
 
   def index
@@ -22,7 +23,7 @@ class ProductsController < ApplicationController
     else
     	render new_product_path
     end
-   
+
   end
 
    private

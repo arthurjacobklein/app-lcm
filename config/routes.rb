@@ -18,9 +18,11 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :users, only: [:create]
 
-  root to: 'products#index'
-  devise_for :user
-  resources :user do
+  root to: 'home#index'
+
+  devise_for :users
+  resources :users
+  resources :users do
     resources :profile_pictures, only: [:create]
   end
   resources :products
