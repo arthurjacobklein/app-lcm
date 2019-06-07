@@ -23,8 +23,40 @@ class ProductsController < ApplicationController
     else
     	render new_product_path
     end
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to @product, notice: 'product was successfully created.' }
+        format.js
+      else
+        format.html { render :new }
+        format.js
+      end
+    end
 
   end
+  def update
+    respond_to do |format|
+      if @product.update(product_params)
+        format.html { redirect_to @product, notice: 'product was successfully updated.' }
+        format.js
+      else
+        format.html { render :edit }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.js
+      end
+    end
+  end
+
+  # DELETE /products/1
+  # DELETE /products/1.json
+  def destroy
+    @product.destroy
+    respond_to do |format|
+      format.html { redirect_to products_url, notice: 'product was successfully destroyed.' }
+      format.js
+    end
+  end
+
 
    private
    def product_params

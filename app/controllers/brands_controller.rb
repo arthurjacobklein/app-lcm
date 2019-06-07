@@ -3,27 +3,7 @@ class BrandsController < ApplicationController
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   def index
-    @brand = Brand.new
     @brands = Brand.all
-
-  end
-
-  def create
-    @brand = Post.new(post_params)
-
-    respond_to do |format|
-      if @brand.save
-        format.html { redirect_to @brand, notice: 'brand was successfully created.' }
-        format.js
-      else
-        format.html { render :new }
-          format.js
-      end
-    end
-  end
-
-  def new
-    @brand = Brand.new
   end
 
   def show
@@ -31,7 +11,7 @@ class BrandsController < ApplicationController
 
   def update
     respond_to do |format|
-     if @brand.update(post_params)
+     if @brand.update(brand_params)
        format.html { redirect_to @brand, notice: 'Brand was successfully updated.' }
        format.js
      else
