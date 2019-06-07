@@ -1,4 +1,6 @@
-class UsersController < ApplicationController
+class BrandsController < ApplicationController
+
+
   def create
   end
 
@@ -6,7 +8,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def edit
@@ -17,4 +18,6 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
+  
 end
