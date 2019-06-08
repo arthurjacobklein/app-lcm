@@ -1,15 +1,15 @@
-<h1>Brands#show</h1>
+<h1>users#show</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>company_name:</strong>
-  <%= @brand.company_name %>
+  <strong>user:</strong>
+  <%= @user.email %>
 </p>
 
 <p>
-  <strong>company_name:</strong>
-  <%= @brand.company_name %>
+  <strong>User:</strong>
+  <%= @user.id %>
 </p>
 
-<%= link_to 'Edit profil', edit_brand_path(@post) %> |
+<%= link_to 'Edit profil', edit_user_path(@user) %> |
 <%= link_to 'Add product', new_product_path %>

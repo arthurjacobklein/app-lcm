@@ -9,5 +9,9 @@ class ApplicationController < ActionController::Base
       Order.new
     end
   end
-  
+
+  def after_sign_in_path_for(resource)
+	   stored_location_for(resource) || products_path
+  end
+
 end

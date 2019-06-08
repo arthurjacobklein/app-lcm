@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   devise_for :brands
   resources :brands
 
+  namespace :user do
+    root :to => "products#index"
+  end
+
   resources :home, only: [:index]
   resources :users, only: [:create]
 
