@@ -31,7 +31,7 @@
                     <li><a href="about-us.html">about us</a></li>
                     <li><a href="shop.html">shop</a></li>
                     <li><a href="cart.html">cart</a></li>
-                    <% if user_signed_in? %>
+                    <% if current_user %>
                     <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                     <li><%= link_to "Profil", user_path(current_user) %></li>
                   <% else %>
@@ -45,11 +45,15 @@
                   </ul>
                 </li>
                 <li><a href="shop.html">shop</a></li>
-                <li><a href="blog.html">BLOG <i class="pe-7s-angle-down"></i></a>
+                <li><a href="#">My account <i class="pe-7s-angle-down"></i></a>
                   <ul>
-                    <li><a href="blog.html">blog 2 column</a></li>
-                    <li><a href="blog-style-2.html">blog full wide</a></li>
-                    <li><a href="blog-details.html">blog details</a></li>
+                     <% if current_user %>
+                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                    <li><%= link_to "Profile", user_path(current_user) %></li>
+                  <% else %>
+                    <li><%= link_to "login", new_user_session_path %></li>
+                    <li> <%= link_to "register", new_user_registration_path %></li>
+                  <% end %>
                   </ul>
                 </li>
                 <li><a href="contact-us.html">CONTACT</a></li>
