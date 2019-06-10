@@ -44,6 +44,7 @@ html, body {
   position: relative;
   z-index: 1;
   line-height: 26px;
+  background-color: none;
 }
 
 .btn-main {
@@ -56,18 +57,10 @@ html, body {
   border-color: #6FE3AF;
 }
 
-.btn-outline-secondary {
-  border: 1px #f09281;
+.btn-info:hover {
   background-color: white;
-  color: #F09281;
+  border-color: #5bc0de;
 }
-
-.btn-outline-secondary:hover {
-  background-color: #F09281;
-  color: white;
-  border-color: transparent;
-}
-
 .slider-area.style-1 {
   height: 100%;
 }
