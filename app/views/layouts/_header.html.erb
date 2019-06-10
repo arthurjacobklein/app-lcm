@@ -5,7 +5,10 @@
         <div class="col-md-3 col-lg-3  col-sm-4 col-xs-4">
             <h1 class="mt-4">twist market</h1>
             <% if current_user %>
-              <p>you're logged ins</p>
+              <p>User logged in : <%= current_user.email%></p>
+            <% end %>
+            <% if current_brand %>
+              <p>Brand logged in : <%= current_brand.email %></p>
             <% end %>
         </div>
         <div class="col-md-6 col-lg-6 col-sm-2 col-xs-2 text-center">
