@@ -14,7 +14,9 @@ Rails.application.routes.draw do
       root to: "brands#index"
     end
   devise_for :brands
-  resources :brands
+  resources :brands do
+    resources :products
+  end 
 
   namespace :user do
     root :to => "products#index"

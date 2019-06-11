@@ -7,25 +7,33 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-20.times do
-  User.create!(
+#10.times do
+  #User.create!(
+    #email: Faker::Internet.email,
+  #  password: "test33"
+#  )
+#end
+
+
+#puts 'Users created '
+10.times do
+  Brand.create!(
     email: Faker::Internet.email,
-    password: "test33"
+    password: "test33",
+    company_name: Faker::Coffee.blend_name
   )
 end
 
-
-puts 'Users created '
-
+puts '10 brands created'
 
 
-20.times do
+10.times do
   Product.create!(
     title: Faker::Creature::Cat.name + " " + Faker::Creature::Cat.name,
     description: "lorem ipsum",
     price: rand(0..100).to_f,
-
+    brand_id: Brand.all.sample.id
   )
 end
 
-puts '20 products created'
+puts '10 products created'
