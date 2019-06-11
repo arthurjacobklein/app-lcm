@@ -9,7 +9,7 @@
     <p class="card-text">First name : <%= @brand.first_name %></p>
     <p class="card-text">Last name : <%= @brand.last_name %></p>
     <p class="card-text">Phone number : <%= @brand.phone_number %></p>
-    <p class="card-text"><a href="<%= @brand.website%>">Website</a></p>
+    <p class="card-text"><%= link_to "Website", @brand.website %></p>
     <%= link_to 'Edit profil', edit_brand_registration_path(:id), class:"btn btn-primary mr-3" %>
     <%= link_to 'Add product', new_product_path, class:"btn btn-success" %>
 
