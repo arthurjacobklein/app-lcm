@@ -16,10 +16,25 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_area :gender %>
+  </div>
+  <div class="field">
     <%= f.label :price %><br>
     <%= f.text_area :price %>
   </div>
-
+  <div class="field">
+    <%= f.label :reference %><br>
+    <%= f.text_area :reference %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_area :quantity %>
+  </div>
+  <div class="field">
+    <%= file_field_tag :product_images, :multiple => true, direct_upload: true %>
+    <%= submit_tag "upload new photos ", class:"btn btn-success btn-sm" %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

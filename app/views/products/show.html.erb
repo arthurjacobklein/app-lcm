@@ -2,11 +2,11 @@
 
 <!-- SHOW -->
 
-<div class="img_product"> 
+<div class="img_product">
             <p><%=  @product.title %></p>
            <p><%=  @product.description %></p>
             <p><% @product.product_images.each do |i| %>
-                <%= image_tag (i) %>
+                <%= image_tag(i) %>
 <% end %></p>
 </div>
 
@@ -155,4 +155,3 @@
   </div>
 </div>
 <!-- page section end -->
-

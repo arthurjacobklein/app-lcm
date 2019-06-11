@@ -12,17 +12,11 @@ class ProductsController < ApplicationController
   end
 
   def new
-  	render new_product_path
+  	@product = Product.new
   end
 
   def create
   	@product = Product.new(product_params)
-  	if @product.save
-  	   @product.product_images.attach(params[:product_images])
-		redirect_to (product_path(@product))
-    else
-    	render new_product_path
-    end
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'product was successfully created.' }
