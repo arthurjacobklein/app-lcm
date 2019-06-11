@@ -40,17 +40,11 @@
                      <% if current_user %>
                     <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                     <li><%= link_to "Profile", user_path(current_user) %></li>
-                  <% else %>
-                    <li><%= link_to "login", new_user_session_path %></li>
-                    <li> <%= link_to "register", new_user_registration_path %></li>
-                  <% end %>
+                    <% end %>
                     <% if current_brand %>
                    <li><%= link_to "Logout", destroy_brand_session_path, method: :delete %></li>
                    <li><%= link_to "Profile", brand_path(current_brand) %></li>
-                 <% else %>
-                   <li><%= link_to "login", new_brand_session_path %></li>
-                   <li> <%= link_to "register", new_brand_registration_path %></li>
-                 <% end %>
+                    <% end %>
                   </ul>
                 </li>
                 <li><a href="contact-us.html">CONTACT</a></li>
