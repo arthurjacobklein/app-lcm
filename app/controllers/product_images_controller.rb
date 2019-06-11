@@ -4,5 +4,6 @@ class ProductImagesController < ApplicationController
     @product.product_images.attach(params[:product_images])
     if @product.product_images.present?
       redirect_to(product_path(@product))
+    end
   end
 end
