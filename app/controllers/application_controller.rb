@@ -9,5 +9,13 @@ class ApplicationController < ActionController::Base
       Order.new
     end
   end
-  
+
+  def after_sign_in_path_for(user)
+    products_path
+  end
+
+  def after_sign_in_path_for(brand)
+    brand_path(brand)
+  end
+
 end
