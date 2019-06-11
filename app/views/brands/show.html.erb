@@ -1,18 +1,30 @@
 <p id="notice"><%= notice %></p>
-<div class="container m-5">
-<div class="card">
-  <div class="card-header">
-    Profile
+  <div class="container m-5">
+  <div class="card">
+    <div class="card-header">
+      Profile
+    </div>
+    <div class="card-body">
+      <p class="card-text">Company name : <%= @brand.company_name %></p>
+      <p class="card-text">First name : <%= @brand.first_name %></p>
+      <p class="card-text">Last name : <%= @brand.last_name %></p>
+      <p class="card-text">Phone number : <%= @brand.phone_number %></p>
+      <p class="card-text"><%= link_to "Website", @brand.website %></p>
+      <%= link_to 'Edit profil', edit_brand_registration_path(:id), class:"btn btn-primary mr-3" %>
+      <%= link_to 'Add product', new_product_path, class:"btn btn-success" %>
+    </div>
   </div>
-  <div class="card-body">
-    <p class="card-text">Company name : <%= @brand.company_name %></p>
-    <p class="card-text">First name : <%= @brand.first_name %></p>
-    <p class="card-text">Last name : <%= @brand.last_name %></p>
-    <p class="card-text">Phone number : <%= @brand.phone_number %></p>
-    <p class="card-text"><%= link_to "Website", @brand.website %></p>
-    <%= link_to 'Edit profil', edit_brand_registration_path(:id), class:"btn btn-primary mr-3" %>
-    <%= link_to 'Add product', new_product_path, class:"btn btn-success" %>
-
   </div>
-</div>
-</div>
+      <div class="container">
+         <div class="row row-events">
+           <% @brand.products.each do |product| %>
+             <div class="col-md-3 event">
+               <div class="title_event">
+                 <h2><%=product.title%></h2>
+                 <%= link_to 'Edit product', edit_product_path(:id), class:"btn btn-primary mr-3" %>
+                 <%= link_to 'Delete product', destroy_product_path(:id), class:"btn btn-primary mr-3" %>
+               </div>
+            </div>
+           <% end %>
+         </div>
+       </div>
