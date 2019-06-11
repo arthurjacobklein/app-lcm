@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
    before_action :authenticate_brand!, only: [:show, :edit, :update, :destroy]
+   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -8,7 +9,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
   def new
@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
 
   def create
   	@product = Product.new(product_params)
+    @product.brand = current_brand
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'product was successfully created.' }
@@ -25,7 +26,9 @@ class ProductsController < ApplicationController
         format.html { render :new }
         format.js
       end
-    end
+  end
+  def edit
+  end
 
   end
   def update
@@ -35,7 +38,6 @@ class ProductsController < ApplicationController
         format.js
       else
         format.html { render :edit }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
         format.js
       end
     end
@@ -53,6 +55,9 @@ class ProductsController < ApplicationController
 
 
    private
+   def set_product
+     @product = Product.find(params[:id])
+   end
    def product_params
       params.permit(:title, :description, :price, :reference, :quantity, :gender, product_images: [])
    end
