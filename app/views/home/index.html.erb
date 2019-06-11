@@ -1,5 +1,15 @@
 <header>
   <a href=""><%= render 'svg/hanger' %></a>
+<div class="main-menu display-inline">
+<ul class="menu">
+  <li><a href="#">Log in <i class="pe-7s-angle-down"></i></a>
+    <ul>
+      <li><%= link_to "as a brand", brand_session_path %></li>
+      <li><%= link_to "as a buyer", new_user_session_path %></li>
+    </ul>
+    </ul>
+  </li>
+  </div>
 </header>
 
 <div class="d-flex flex-row mt-5">
@@ -7,11 +17,13 @@
     <h1 class="font-weight-bold">Twist Market.</h1>
     <h5>the new way to find clothes for sale</h5>
     <div class="d-flex flex-row">
-      <a class="btn btn-main mr-4 mt-4" href="#" role="button">I represent a brand</a>
-      <a class="btn btn-outline-secondary m-4" href="#" role="button">I am a reseller</a>
+      <%= link_to "I represent a brand", new_brand_registration_path, class: "btn btn-main mr-4 mt-4" %>
+      <%= link_to "I am a reseller", new_user_registration_path, class: "btn btn-info m-4" %>
     </div>
   </div>
   <div class="col-5">
-    <img src="https://images.pexels.com/photos/1475033/pexels-photo-1475033.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" id="home_picture">
+    <img
+      src="https://images.pexels.com/photos/1475033/pexels-photo-1475033.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      alt="" id="home_picture">
   </div>
 </div>
