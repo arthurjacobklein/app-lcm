@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 col-lg-3  col-sm-4 col-xs-4">
-            <a href="<%= products_path %>"><h1 class="mt-4">twist market</h1></a>
+            <h1 class="mt-4"><%= link_to "twist market", products_path%></h1>
             <% if current_user %>
               <p>User logged in : <%= current_user.email%></p>
             <% end %>
@@ -15,16 +15,21 @@
           <div class="main-menu display-inline">
             <nav>
               <ul class="menu">
-                <li><a href="index.html">HOME <i class="pe-7s-angle-down"></i></a>
+                <li>
+                <%= link_to products_path do %>
+                  HOME<i class="pe-7s-angle-down"></i>
+                <% end %>   
                   <ul>
                     <li><%= link_to "Products", products_path %></li>
                     <li><%= link_to "Brands", brands_path %></li>
 
                   </ul>
                 </li>
-                <li><a href="<%= about_index_path %>">ABOUT US</a></li>
-                <li><a href="shop.html">shop</a></li>
-                <li><a href="#">My account <i class="pe-7s-angle-down"></i></a>
+                <li><%= link_to "ABOUT US", about_index_path%></li>
+                <li>
+                <%= link_to "#" do %>
+                  My account<i class="pe-7s-angle-down"></i>
+                <% end %> 
                   <ul>
                      <% if current_user %>
                     <li><%= link_to "Profile", user_path(current_user) %></li>
@@ -36,7 +41,7 @@
                     <% end %>
                   </ul>
                 </li>
-                <li><a href="contact-us.html">CONTACT</a></li>
+                <li><%= link_to "Contact us", "contact-us.html"%></li>
               </ul>
             </nav>
           </div>
@@ -48,7 +53,9 @@
               <ul>
                 <li>
                   <div class="cart-img">
-                    <a href="#"><img src="assets/img/cart/1.jpg" alt="" /></a>
+                    <%= link_to "#" do %>
+                  My account<i class="pe-7s-angle-down"></i>
+                <% end %> 
                   </div>
                   <div class="cart-content">
                     <h3><a href="#"> 1 X Faded...</a> </h3>
@@ -83,25 +90,7 @@
                     <span class="f-right cart-price">$692.00</span>
                   </div>
                 </li>
-                <li class="checkout m-0"><a href="#">checkout <i class="pe-7s-angle-right"></i></a></li>
-              </ul>
-            </div>
-            <div class="language-menu none">
-              <ul>
-                <li><a href="#">eng <i class="pe-7s-angle-down"></i></a>
-                  <ul>
-                    <li><a href="#">eng</a></li>
-                    <li><a href="#">fre</a></li>
-                    <li><a href="#">ger</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">usd <i class="pe-7s-angle-down"></i></a>
-                  <ul>
-                    <li><a href="#">usd</a></li>
-                    <li><a href="#">eur</a></li>
-                    <li><a href="#">ger</a></li>
-                  </ul>
-                </li>
+                <li class="checkout m-0 mr-5"><a href="#">checkout <i class="pe-7s-angle-right"></i></a></li>
               </ul>
             </div>
           </div>

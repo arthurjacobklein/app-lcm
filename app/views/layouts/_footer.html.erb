@@ -25,9 +25,9 @@
                             <h3>Support</h3>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Terms & Condition</a></li>
-                                    <li><a href="#">Delivery Information</a></li>
+                                    <li><%= link_to "Careers"%></li>
+                                    <li><%= link_to "Terms & Condition"%></li>
+                                    <li><%= link_to "Delivery Information"%></li>
                                 </ul>
                             </div>
                         </div>
@@ -36,10 +36,14 @@
                         <div class="footer-title res-mrg">
                             <h3>Quick Links</h3>
                             <div class="footer-menu">
-                                <ul>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="cart.html">My Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                <ul>                                    
+                                    <% if current_user %>
+                                    <li><%= link_to "My Profile", user_path(current_user.id)%></li>
+                                    <% end %>
+                                    <% if current_brand %>
+                                    <li><%= link_to "My Account", brand_path(current_brand.id)%></li>
+                                    <% end %>
+                                    <li><%= link_to "Checkout"%></li>
                                 </ul>
                             </div>
                         </div>
@@ -69,7 +73,7 @@
         <div class="footer-bottom text-center ptb-20">
             <p>
                 © 2019
-                <a href="https://github.com/arthurjacobklein/app-lcm/" target="_blank">Arthur, Dhiya, Romain</a> . All Rights Reserved.
+                <%= link_to "Arthur, Dhiya, Romain", "https://github.com/arthurjacobklein/app-lcm/", target: "_blank" %>. All Rights Reserved.
             </p>
         </div>
     </div>
