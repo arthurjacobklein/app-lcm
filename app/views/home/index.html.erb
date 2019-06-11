@@ -1,14 +1,13 @@
 <header>
-  <a href=""><%= render 'svg/hanger' %></a>
+  <%=link_to render "svg/hanger"%>
 <div class="main-menu display-inline">
 <ul class="menu">
-  <li><a href="#">Log in <i class="pe-7s-angle-down"></i></a>
+  <li>LOGIN <i class="pe-7s-angle-down"></i>
     <ul>
       <li><%= link_to "as a brand", brand_session_path %></li>
       <li><%= link_to "as a buyer", new_user_session_path %></li>
     </ul>
     </ul>
-  </li>
   </div>
 </header>
 

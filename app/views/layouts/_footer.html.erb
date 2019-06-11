@@ -6,9 +6,15 @@
                    
                     <p>Lorem ipsum dolor sit amet tempor, consectetur adipisicing.</p>
                     <ul>
-                        <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://www.instagram.com/devitems/"><i class="fa fa-instagram"></i></a></li>
+                        <li><%= link_to "https://www.facebook.com/devitems/?ref=bookmarks" do %>
+                        <i class="fa fa-facebook"></i>
+                        <% end %></li>                        
+                        <li><%= link_to "https://linkedin.com" do %>
+                        <i class="fa fa-linkedin"></i>
+                        <% end %></li>            
+                        <li><%= link_to "https://instagram.com/devitems" do %>
+                        <i class="fa fa-instagram"></i>
+                        <% end %></li>
                     </ul>
                 </div>
             </div>
