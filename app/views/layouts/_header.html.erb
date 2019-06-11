@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 col-lg-3  col-sm-4 col-xs-4">
-            <h1 class="mt-4">twist market</h1>
+            <a href="<%= products_path %>"><h1 class="mt-4">twist market</h1></a>
             <% if current_user %>
               <p>User logged in : <%= current_user.email%></p>
             <% end %>
@@ -22,35 +22,18 @@
 
                   </ul>
                 </li>
-                <li><a href="about-us.html">ABOUT US</a></li>
-                <li><a href="#">pages <i class="pe-7s-angle-down"></i></a>
-                  <ul>
-                    <li><a href="about-us.html">about us</a></li>
-                    <li><a href="shop.html">shop</a></li>
-                    <li><a href="cart.html">cart</a></li>
-                    <li><a href="checkout.html">checkout</a></li>
-                    <li><a href="wishlist.html">wishlist</a></li>
-                    <li><a href="preduct-details.html">shop details</a></li>
-                    <li><a href="contact-us.html">contact us</a></li>
-                  </ul>
-                </li>
+                <li><a href="<%= about_index_path %>">ABOUT US</a></li>
                 <li><a href="shop.html">shop</a></li>
                 <li><a href="#">My account <i class="pe-7s-angle-down"></i></a>
                   <ul>
                      <% if current_user %>
-                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                     <li><%= link_to "Profile", user_path(current_user) %></li>
-                  <% else %>
-                    <li><%= link_to "login", new_user_session_path %></li>
-                    <li> <%= link_to "register", new_user_registration_path %></li>
-                  <% end %>
+                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                    <% end %>
                     <% if current_brand %>
-                   <li><%= link_to "Logout", destroy_brand_session_path, method: :delete %></li>
                    <li><%= link_to "Profile", brand_path(current_brand) %></li>
-                 <% else %>
-                   <li><%= link_to "login", new_brand_session_path %></li>
-                   <li> <%= link_to "register", new_brand_registration_path %></li>
-                 <% end %>
+                   <li><%= link_to "Logout", destroy_brand_session_path, method: :delete %></li>
+                    <% end %>
                   </ul>
                 </li>
                 <li><a href="contact-us.html">CONTACT</a></li>

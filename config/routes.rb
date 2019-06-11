@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :about, only: [:index]
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   namespace :admin do
@@ -32,6 +33,6 @@ Rails.application.routes.draw do
   resources :products
   resources :order_items
   resources :cart, only: [:show]
-
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
