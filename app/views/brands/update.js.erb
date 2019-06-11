@@ -1,0 +1,8 @@
+$("#myupdatebrand_<%= @brand.id %>").modal('hide');
+
+$("#brand_<%= @brand.id %>").fadeOut(500, function(){
+
+	$(this).remove();
+	$("#container_brands").prepend('<%= j render @brand %>');
+
+});

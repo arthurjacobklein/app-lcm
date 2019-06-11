@@ -1,0 +1,23 @@
+<div class="shop-area ptb-90">
+  <div class="container-fluid">
+    <div class="shop-style-all">
+
+      <% @brands.each do |brand| %>
+      <div class="col-md-3 col-sm-6 col-xs-12 grid-item cat1">
+        <div class="shop hover-style mb-30">
+          <div class="shop-img">
+            <%=link_to image_tag("https://i.imgur.com/uwliklH.jpg"), brand_path(brand.id)%>
+          </div>
+          <div class="shop-title title-style-1">
+            <h3><%= link_to brand.company_name, brand_path(brand.id)%></h3>
+            <h3><%= link_to "Website", brand.website %></h3>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>

@@ -2,11 +2,11 @@
 
 <!-- SHOW -->
 
-<div class="img_product"> 
+<div class="img_product">
             <p><%=  @product.title %></p>
            <p><%=  @product.description %></p>
             <p><% @product.product_images.each do |i| %>
-                <%= image_tag (i) %>
+                <%= image_tag(i) %>
 <% end %></p>
 </div>
 
@@ -93,12 +93,6 @@
             </div>
             <button class="add-to-cart">add to cart</button>
           </div>
-          <!-- Usefull Link -->
-          <ul class="usefull-link section">
-            <li><a href="#"><i class="pe-7s-mail"></i> Email to a Friend</a></li>
-            <li><a href="#"><i class="pe-7s-like"></i> Wishlist</a></li>
-            <li><a href="#"><i class="pe-7s-print"></i> print</a></li>
-          </ul>
           <!-- Share -->
           <div class="share-icons section">
             <span>share :</span>
@@ -155,4 +149,3 @@
   </div>
 </div>
 <!-- page section end -->
-

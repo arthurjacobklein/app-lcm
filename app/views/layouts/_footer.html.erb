@@ -1,43 +1,33 @@
 <footer class="footer-area">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 col-sm-5">
+            <div class="col-md-3 col-sm-4">
                 <div class="footer-logo">
-                    <a href="#"><img src="assets/img/logo/logo.png" alt=""></a>
+                   
                     <p>Lorem ipsum dolor sit amet tempor, consectetur adipisicing.</p>
                     <ul>
-                        <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/devitemsllc"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://www.google.com/"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://www.instagram.com/devitems/"><i class="fa fa-instagram"></i></a></li>
+                        <li><%= link_to "https://www.facebook.com/devitems/?ref=bookmarks" do %>
+                        <i class="fa fa-facebook"></i>
+                        <% end %></li>                        
+                        <li><%= link_to "https://linkedin.com" do %>
+                        <i class="fa fa-linkedin"></i>
+                        <% end %></li>            
+                        <li><%= link_to "https://instagram.com/devitems" do %>
+                        <i class="fa fa-instagram"></i>
+                        <% end %></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-7 col-sm-7">
+            <div class="col-md-6 col-sm-7">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="footer-title res-mrg">
-                            <h3>categories</h3>
-                            <div class="footer-menu">
-                                <ul>
-                                    <li><a href="shop.html"> Clothing</a></li>
-                                    <li><a href="shop.html"> Shoes</a></li>
-                                    <li><a href="shop.html">Watches</a></li>
-                                    <li><a href="shop.html">Jewelry</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-auto col-sm-6">
                         <div class="footer-title res-mrg">
                             <h3>Support</h3>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Sale products</a></li>
-                                    <li><a href="#">Terms & Condition</a></li>
-                                    <li><a href="#">Delivery Inforamtion</a></li>
+                                    <li><%= link_to "Careers"%></li>
+                                    <li><%= link_to "Terms & Condition"%></li>
+                                    <li><%= link_to "Delivery Information"%></li>
                                 </ul>
                             </div>
                         </div>
@@ -46,11 +36,14 @@
                         <div class="footer-title res-mrg">
                             <h3>Quick Links</h3>
                             <div class="footer-menu">
-                                <ul>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                    <li><a href="cart.html">My Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                <ul>                                    
+                                    <% if current_user %>
+                                    <li><%= link_to "My Profile", user_path(current_user.id)%></li>
+                                    <% end %>
+                                    <% if current_brand %>
+                                    <li><%= link_to "My Account", brand_path(current_brand.id)%></li>
+                                    <% end %>
+                                    <li><%= link_to "Checkout"%></li>
                                 </ul>
                             </div>
                         </div>
@@ -60,8 +53,7 @@
             <div class="col-md-3 col-sm-12">
                 <div class="footer-title res-mrg-2">
                     <h3>newsletter</h3>
-                    <div class="footer-newsletter">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    <div class="footer-newsletter d-flex">
                         <div id="mc_embed_signup" class="subscribe-form">
                             <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                 <div id="mc_embed_signup_scroll" class="mc-form">
@@ -81,7 +73,7 @@
         <div class="footer-bottom text-center ptb-20">
             <p>
                 © 2019
-                <a href="https://github.com/arthurjacobklein/app-lcm/" target="_blank">Arthur, Dhiya, Romain</a> . All Rights Reserved.
+                <%= link_to "Arthur, Dhiya, Romain", "https://github.com/arthurjacobklein/app-lcm/", target: "_blank" %>. All Rights Reserved.
             </p>
         </div>
     </div>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<div class="container m-5">
+<div class="card">
+  <div class="card-header">
+    Profile
+  </div>
+  <div class="card-body">
+    <p class="card-text">Email : <%= @user.email %></p>
+    <%= link_to 'Edit profil', edit_user_path(@user), class:"btn btn-primary mr-3" %>
+    <%= link_to 'Add product', new_product_path, class:"btn btn-success" %>
+
+  </div>
+</div>
+
+</div>
