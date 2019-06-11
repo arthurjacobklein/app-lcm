@@ -60,6 +60,7 @@ html, body {
 .btn-info:hover {
   background-color: white;
   border-color: #5bc0de;
+  color: #5bc0de;
 }
 .slider-area.style-1 {
   height: 100%;
@@ -67,4 +68,9 @@ html, body {
 
 .slider-area.style-1.d-flex.align-items-center {
   background-image: url("https://i.imgur.com/HXr0AhK.jpg");
+}
+
+.jumbotron {
+  height: 100vh;
+  background: none;
 }
