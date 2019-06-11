@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
-  before_action :authenticate_brand!
+  before_action :authenticate_brand!, only: [:show, :edit, :update, :destroy]
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
 
   def index
