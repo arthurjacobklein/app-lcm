@@ -74,4 +74,21 @@
   background-image: url("https://i.imgur.com/HXr0AhK.jpg");
 }
 
+.btn-signup {
+    margin-top: 26px;
+    margin-right: 50px;
+        }
+
+.form-row-bottom {
+  width: 318px;
+  height: 84px;
+}
+
+.btn-login {
+  margin-left: 65px;
+}
+
+
+
+
 

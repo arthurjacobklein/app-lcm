@@ -21,6 +21,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "rounded" %>
   </div>
 
+  <div class="field">
+                                          <%= f.label :first_name %><br />
+                                          <%= f.text_field :first_name, class: "rounded" %>
+                                        </div>
+
   <div class="actions col-4 mb-5 mt-5 pl-0">
     <%= f.submit "Sign up", :class => 'btn btn-success rounded' %>
     <%= link_to 'Log in', new_user_session_path %>

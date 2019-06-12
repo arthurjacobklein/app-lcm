@@ -6,6 +6,11 @@
   </div>
   <div class="card-body">
     <p class="card-text">Email : <%= @user.email %></p>
+    <p class="card-text">First name : <%= @user.first_name %></p>
+    <p class="card-text">Last name : <%= @user.last_name %></p>
+    <p class="card-text">Company name : <%= @user.company_name %></p>
+    <p class="card-text">Phone number : <%= @user.phone_number %></p>
+    <p class="card-text">Website : <%= @user.website %></p>
     <%= link_to 'Edit profil', edit_user_path(@user), class:"btn btn-primary mr-3" %>
     <%= link_to 'Add product', new_product_path, class:"btn btn-success" %>
 
