@@ -124,3 +124,12 @@ section::after {
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
+
+.bg-green {
+  background-color: #aaf0d1;
+  min-width: 100%;
+}
+
+hr {
+  border-bottom: 1px dashed #000;
+}
