@@ -1,28 +1,127 @@
 <header>
   <%=link_to render "svg/hanger"%>
-<div class="main-menu display-inline">
-<ul class="menu">
-  <li>LOGIN <i class="pe-7s-angle-down"></i>
-    <ul>
-      <li><%= link_to "as a brand", brand_session_path %></li>
-      <li><%= link_to "as a buyer", new_user_session_path %></li>
+  <div class="main-menu display-inline">
+    <ul class="menu">
+      <li>LOGIN <i class="pe-7s-angle-down"></i>
+        <ul>
+          <li><%= link_to "as a brand", brand_session_path %></li>
+          <li><%= link_to "as a buyer", new_user_session_path %></li>
+        </ul>
+      <li>REGISTER <i class="pe-7s-angle-down"></i>
+        <ul>
+          <li><%= link_to "as a brand", new_user_registration_path %></li>
+          <li><%= link_to "as a buyer", new_brand_registration_path %></li>
+        </ul>
     </ul>
-    </ul>
+
   </div>
 </header>
 
-<div class="d-flex flex-row mt-5">
-  <div class="col-5 d-flex justify-content-center flex-column" id="landing_page_text">
-    <h1 class="font-weight-bold">Twist Market.</h1>
-    <h5>the new way to find clothes for sale</h5>
-    <div class="d-flex flex-row">
-      <%= link_to "I represent a brand", new_brand_registration_path, class: "btn btn-main mr-4 mt-4" %>
-      <%= link_to "I am a reseller", new_user_registration_path, class: "btn btn-info m-4" %>
+<div class="jumbotron">
+
+  <div class="d-flex flex-row mt-5 mb-5">
+    <div class="col-5 d-flex justify-content-center flex-column" id="landing_page_text">
+      <h1 class="font-weight-bold">Twist Market.</h1>
+      <h5>the new way to find clothes for sale</h5>
+      <div class="d-flex flex-row">
+        <%= link_to "I represent a brand", new_brand_registration_path, class: "btn btn-main mr-4 mt-4" %>
+        <%= link_to "I am a reseller", new_user_registration_path, class: "btn btn-info m-4" %>
+      </div>
     </div>
+    <div class="col-5">
+      <img
+        src="https://images.pexels.com/photos/1475033/pexels-photo-1475033.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        alt="" id="home_picture">
+    </div>
+
   </div>
-  <div class="col-5">
-    <img
-      src="https://images.pexels.com/photos/1475033/pexels-photo-1475033.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260"
-      alt="" id="home_picture">
+  <section id="section01" class="demo">
+    <a href="#section02"><span></span>Scroll</a>
+  </section>
+</div>
+
+<div class="container bg-green d-flex justify-content-center p-5">
+  <div class="col-6" id="section02">
+    <h1 class="text-center">A FASHION LINK BETWEEN EUROPE AND ASIA</h1>
+  <hr>
+    <h4>Since our creation in 2000, we have provided our customers with in-depth knowledge of the Fashion industry, its
+      marketing and more recently its developments in the digital fashion sector.
+      Thanks to our long and deep experience within this industry in Europe and Asia, LCM can accompany its customers in
+      the constant evolution, the changes and the needs of fashion.</h4><br>
+      <hr>
   </div>
 </div>
+
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4 d-flex align-self-stretch">
+      <div class="media block-6 services d-block text-center">
+        <div class="d-flex justify-content-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <%= link_to render 'svg/budget'%>
+          </div>
+        </div>
+        <div class="media-body p-2 mt-3">
+          <h3 class="heading">BUYING & OEM</h3>
+          <p>LCM acts on behalf of Asian companies in Europe providing services such as : market information, purchasing assistance, order management, logistic and payments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+      <div class="media block-6 services d-block text-center">
+        <div class="d-flex justify-content-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <%= link_to render 'svg/consultant'%>
+          </div>
+        </div>
+        <div class="media-body p-2 mt-3">
+          <h3 class="heading">CONSULTING</h3>
+          <p>LCM acts on behalf of Asian and European companies in partner evaluation, branding, marketing, sales,
+            finance, contract negotiations, licensing and legal supervision.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="row d-flex justify-content-center">
+  <div class="col-md-4 d-flex align-self-stretch">
+    <div class="media block-6 services d-block text-center">
+      <div class="d-flex justify-content-center">
+        <div class="icon d-flex align-items-center justify-content-center">
+          <%= link_to render 'svg/agreement'%>
+        </div>
+      </div>
+      <div class="media-body p-2 mt-3">
+        <h3 class="heading">BRAND DEVELOPMENT: EUROPE -> JAPAN</h3>
+        <p>LCM assist French brands in their development in Japan in services such as export strategies, linking,
+          contract negotiations, retail support, e-commerce solutions.</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+      <div class="media block-6 services d-block text-center">
+        <div class="d-flex justify-content-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <%= link_to render 'svg/think'%>
+          </div>
+        </div>
+        <div class="media-body p-2 mt-3">
+          <h3 class="heading">BRAND DEVELOPMENT: JAPAN -> EUROPE</h3>
+          <p>LCM assist Japanese brands in their development in Europe in services such as export strategies, linking,
+            contract negotiations, retail support, e-commerce solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>$(function () {
+    $('a[href*=#]').on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
+    });
+  });
+</script>
