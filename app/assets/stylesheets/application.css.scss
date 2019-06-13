@@ -164,3 +164,27 @@ i.fa.fa-facebook:hover {
 i.fa.fa-linkedin:hover {
   color: #0077B5;
 }
+
+i.fa.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.member-social a {
+  border: none;
+}
+
+.member-social a:hover {
+  border: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+#about_us_head {
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  width: 50%;
+}
+
+.about-text-title > p {
+  padding: 0;
+}

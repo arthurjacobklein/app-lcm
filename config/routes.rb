@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :about, only: [:index]
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   namespace :admin do
