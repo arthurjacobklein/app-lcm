@@ -133,3 +133,15 @@ section::after {
 hr {
   border-bottom: 1px dashed #000;
 }
+
+input#mc-embedded-subscribe {
+  background-color: #aaf0d1;
+  width: 30%;
+  border: transparent;
+  color: black;
+}
+
+.slider-text > a:hover {
+  background-color: #aaf0d1;
+  color: #333;
+}
