@@ -133,3 +133,81 @@ section::after {
 hr {
   border-bottom: 1px dashed #000;
 }
+
+input#mc-embedded-subscribe {
+  background-color: black;
+  width: 30%;
+  border: transparent;
+  color: white;
+  font-weight: 400;
+}
+
+input#mc-embedded-subscribe:hover {
+  background-color: #aaf0d1;
+  color: black;
+  border: 1px solid black;
+}
+
+.slider-text > a:hover {
+  background-color: #aaf0d1;
+  color: #333;
+}
+
+i.fa.fa-instagram:hover {
+  color: #C13584;
+}
+
+i.fa.fa-facebook:hover {
+  color: #3C5A99;
+}
+
+i.fa.fa-linkedin:hover {
+  color: #0077B5;
+}
+
+i.fa.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.member-social a {
+  border: none;
+}
+
+.member-social a:hover {
+  border: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+#about_us_head {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 50%;
+}
+
+#contact_us_head {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 50%;
+  background-color: transparent;
+}
+
+.about-text-title > p {
+  padding: 0;
+}
+
+.single-testimonial.text-center {
+  margin: 5%;
+}
+
+.single-testimonial > p {
+  padding: 0;
+}
+
+.footer-area.pt-5 {
+  border-top: 2px solid rgba(207,215,223,.25);
+}
+
+.waraper {
+  padding: 0 50px;
+}
