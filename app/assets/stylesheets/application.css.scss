@@ -135,10 +135,17 @@ hr {
 }
 
 input#mc-embedded-subscribe {
-  background-color: #aaf0d1;
+  background-color: black;
   width: 30%;
   border: transparent;
+  color: white;
+  font-weight: 400;
+}
+
+input#mc-embedded-subscribe:hover {
+  background-color: #aaf0d1;
   color: black;
+  border: 1px solid black
 }
 
 .slider-text > a:hover {
