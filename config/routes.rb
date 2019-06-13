@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   devise_for :brands
   resources :brands do
     resources :products
-  end 
+  end
 
   namespace :user do
     root :to => "products#index"
@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   end
   resources :products
   resources :order_items
-  resources :cart, only: [:show]
-  
+  resource :cart, only: [:show]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

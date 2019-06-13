@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  has_many :order_items, dependent: :destroy
+  has_many :order_items
   has_many :products, through: :order_item
   belongs_to :account
   before_save :update_total

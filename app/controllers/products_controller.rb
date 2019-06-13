@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
       end
   end
   def edit
+    @product.brand =Product.find(params[:current_brand_id])
   end
 
   end

@@ -7,6 +7,7 @@ class BrandsController < ApplicationController
   end
 
   def show
+    @brand.products = current_brand.products
   end
 
   def update
