@@ -88,6 +88,17 @@
   margin-left: 65px;
 }
 
+.img_avatar {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.btn-profil {
+  width: 20%;
+
+}
+
 
 
 
