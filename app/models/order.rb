@@ -2,6 +2,7 @@ class Order < ApplicationRecord
   has_many :order_items
   has_many :products, through: :order_item
   belongs_to :account
+  belongs_to :user
   before_save :update_total
   before_create :update_status
 
