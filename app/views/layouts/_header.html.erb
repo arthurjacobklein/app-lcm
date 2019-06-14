@@ -18,7 +18,7 @@
                 <li>
                 <%= link_to products_path do %>
                   HOME<i class="pe-7s-angle-down"></i>
-                <% end %>   
+                <% end %>
                   <ul>
                     <li><%= link_to "Products", products_path %></li>
                     <li><%= link_to "Brands", brands_path %></li>
@@ -30,15 +30,15 @@
                 <li>
                 <%= link_to "#" do %>
                   My account<i class="pe-7s-angle-down"></i>
-                <% end %> 
+                <% end %>
                   <ul>
                      <% if current_user %>
                     <li><%= link_to "Profile", user_path(current_user) %></li>
                     <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                     <% end %>
                     <% if current_brand %>
-                   <li><%= link_to "Profile", brand_path(current_brand) %></li>
-                   <li><%= link_to "Logout", destroy_brand_session_path, method: :delete %></li>
+                   <li><%= link_to "Dashboard", brand_path(current_brand) %></li>
+                   <li><%= link_to "Brand Logout", destroy_brand_session_path, method: :delete %></li>
                     <% end %>
                   </ul>
                 </li>
@@ -53,9 +53,7 @@
               <ul>
                 <li>
                   <div class="cart-img">
-                    <%= link_to "#" do %>
-                  My account<i class="pe-7s-angle-down"></i>
-                <% end %> 
+                    <%= link_to "my cart", cart_path(current_order)%>
                   </div>
                   <div class="cart-content">
                     <h3><a href="#"> 1 X Faded...</a> </h3>
