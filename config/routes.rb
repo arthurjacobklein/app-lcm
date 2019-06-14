@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+
+  get 'contacts/create'
+  get 'contacts/new'
+  get 'contacts/create'
+  resources :about, only: [:index]
+
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   namespace :admin do
