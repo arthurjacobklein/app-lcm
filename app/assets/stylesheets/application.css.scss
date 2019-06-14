@@ -231,3 +231,9 @@ input.add_cart {
   border: none;
   margin-top: 2%;
 }
+
+input.add_cart:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
