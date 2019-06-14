@@ -9,6 +9,6 @@ class ContactsController < ApplicationController
       render root_path
     else
       render :new
+    end
   end
-
 end
