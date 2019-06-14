@@ -83,16 +83,17 @@
                         <%= f.text_field :website, class: "rounded" %>
                       </div>
                     </div>
-
-                    <div class="col">
-                      <div class="actions">
-                        <%= f.submit "Sign up", :class => 'btn-signup
-                        btn-success rounded' %> <%= link_to 'Log in',
-                        new_user_session_path, :class => 'btn-login' %>
-                      </div>
-                    </div>
                   </div>
                 </div>
+
+                <div class="col">
+                  <div class="actions">
+                    <%= f.submit "Sign up", :class => 'btn-signup
+                    rounded', :id => 'signup_btn' %> <%= link_to 'Log in',
+                    new_user_session_path, :class => 'btn-login' %>
+                  </div>
+                </div>
+              
                 <% end %>
               </form>
             </div>

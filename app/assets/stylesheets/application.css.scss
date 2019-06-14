@@ -211,3 +211,16 @@ i.fa.fa-twitter:hover {
 .waraper {
   padding: 0 50px;
 }
+
+input#signup_btn {
+  background-color: black;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+input#signup_btn:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
