@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'contacts/create'
-  get 'contacts/new'
-  get 'contacts/create'
+  resources :contacts
   resources :about, only: [:index]
 
   devise_for :admins
@@ -15,7 +13,6 @@ Rails.application.routes.draw do
       resources :orders
       resources :order_items
       resources :products
-
       root to: "brands#index"
     end
   devise_for :brands
@@ -27,6 +24,7 @@ Rails.application.routes.draw do
     root :to => "products#index"
   end
 
+  resources :charges
   resources :home, only: [:index]
 
   root to: 'home#index'
@@ -48,4 +46,3 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
-
