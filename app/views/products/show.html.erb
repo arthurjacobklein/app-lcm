@@ -10,9 +10,6 @@
 <% end %></p>
 </div>
 
-
-
-
 <!-- page section start -->
 <div class="page-section section pb-100">
   <div class="container-fluid">
@@ -93,6 +90,7 @@
             </div>
             <button class="add-to-cart">add to cart</button>
           </div>
+          <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-main mr-4 mt-4" %>
           <!-- Share -->
           <div class="share-icons section">
             <span>share :</span>
@@ -148,4 +146,11 @@
     </div>
   </div>
 </div>
+<p id="notice"><%= notice %></p>
+
+
+
+
+
+
 <!-- page section end -->

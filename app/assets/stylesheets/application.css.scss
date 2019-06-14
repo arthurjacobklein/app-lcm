@@ -164,3 +164,50 @@ i.fa.fa-facebook:hover {
 i.fa.fa-linkedin:hover {
   color: #0077B5;
 }
+
+i.fa.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.member-social a {
+  border: none;
+}
+
+.member-social a:hover {
+  border: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+#about_us_head {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 50%;
+}
+
+#contact_us_head {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 50%;
+  background-color: transparent;
+}
+
+.about-text-title > p {
+  padding: 0;
+}
+
+.single-testimonial.text-center {
+  margin: 5%;
+}
+
+.single-testimonial > p {
+  padding: 0;
+}
+
+.footer-area.pt-5 {
+  border-top: 2px solid rgba(207,215,223,.25);
+}
+
+.waraper {
+  padding: 0 50px;
+}
