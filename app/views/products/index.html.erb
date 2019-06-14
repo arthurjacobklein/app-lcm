@@ -22,12 +22,8 @@
               <span class="new-price"><%= number_to_currency product.price %></span>
               <%= form_for @order_item do |f| %>
               <%= f.hidden_field :product_id, value: product.id %>
-              <%= f.number_field :quantity %>
-              <%= f.submit "Add to cart" %>
+              <%= f.submit "Add to cart", class:"add_cart" %>
             <% end %></p>
-            </div>
-            <div class="product-cart">
-              <a href="#"><i class="pe-7s-cart"></i></a>
             </div>
           </div>
         </div>
