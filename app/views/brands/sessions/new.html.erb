@@ -1,26 +1,104 @@
-<h2>Log in</h2>
+<div class="breadcrumb-area">
+                <div class="container-fluid text-center">
+                    <div class="breadcrumb-stye gray-bg ptb-100">
+                        <h2 class="page-title">login </h2>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb end -->
+            <!-- register-area start -->
+            <div class="register-area ptb-100">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-4 col-lg-offset-4">
+                            <div class="login">
+                                <div class="login-form-container">
+                                    <div class="login-text">
+                                        <h2>login</h2>
+                                        <span>Please login using account detail bellow.</span>
+                                    </div>
+                                    <div class="login-form">
+                                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                                            <div class="field">
+                                              <%= f.label :email %><br />
+                                              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'rounded' %>
+                                            </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+                                            <div class="field">
+                                              <%= f.label :password %><br />
+                                              <%= f.password_field :password, autocomplete: "current-password", class:"rounded" %>
+                                            </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+                                            <% if devise_mapping.rememberable? %>
+                                              <div class="field">
+                                                <%= f.check_box :remember_me %>
+                                                <%= f.label :remember_me %>
+                                              </div>
+                                            <% end %>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+                                            <div class="actions">
+                                              <%= f.submit "Log in", :class => 'btn btn-success rounded' %>
+                                              <%= link_to 'Sign up', new_user_registration_path %>
+                                            </div>
+                                          <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- register-area end -->
+            <!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="login">
+                                <div class="login-form-container">
+                                    <div class="login-text">
+                                        <h2>login</h2>
+                                        <span>Please login using account detail bellow.</span>
+                                    </div>
+                                    <div class="login-form">
+                                        <form action="#" method="post">
+                                            <input type="text" name="user-name" placeholder="Username">
+                                            <input type="password" name="user-password" placeholder="Password">
+                                            <div class="button-box">
+                                                <div class="login-toggle-btn">
+                                                    <input type="checkbox" id="remember">
+                                                    <label for="remember">Remember me</label>
+                                                    <a href="#">Forgot Password?</a>
+                                                </div>
+                                                <button type="submit" class="default-btn floatright">Login</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal end -->
+        </div>
+        
+        
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "brands/shared/links" %>
+    <!-- all js here -->
+        <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/ajax-mail.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

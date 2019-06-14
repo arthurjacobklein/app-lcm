@@ -1,0 +1,63 @@
+<div class="col-md-4 blog-main box text-center" id="brand_<%= brand.id %>">
+
+            <div class="panel panel-info"><!-- Panel Info -->
+
+                  <div class="panel-heading">
+                    <h3 class="panel-company_name"><%= brand.company_name %></h3>
+                    <p><%= brand.website %></p>
+                  </div>
+
+                  <div class="panel-body"><!-- Panel Body -->
+
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myupdatebrand_<%= brand.id %>">
+                          Edit
+                        </button>
+                        <%= link_to 'Destroy', brand , method: :delete, class: "btn btn-danger", remote: true %>
+                    </div>
+                  </div><!-- Panel Body -->
+
+            </div><!-- Panel Info -->
+
+
+            <!-- Modal - update brands -->
+                  <%= form_for(brand, :method => :put, remote: true) do |f| %>
+                  <div class="modal fade" id="myupdatebrand_<%= brand.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-website">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-company_name" id="myModalLabel">Edit</h4>
+                      </div>
+                      <div class="modal-body">
+
+                      <div class="field">
+                        <%= f.label :first_name %><br>
+                        <%= f.text_area :first_name, class: "form-control" %>
+                      </div>
+                      <div class="field">
+                        <%= f.label :last_name %><br>
+                        <%= f.text_area :last_name, class: "form-control" %>
+                      </div>
+                      <div class="field">
+                        <%= f.label :company_name %><br>
+                        <%= f.text_area :company_name, class: "form-control" %>
+                      </div>
+                      <div class="field">
+                        <%= f.label :website %><br>
+                        <%= f.text_area :website, class: "form-control" %>
+                      </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id="myupdatebutton_<%= brand.id %>" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <%= submit_tag "Update", class: "btn btn-primary" %>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <% end %>
+            <!-- Modal -->
+
+
+</div>
