@@ -32,7 +32,7 @@ class BrandsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_brand
-      @brand = Brand.find(params[:id])
+      @brand = current_brand
     end
     def brand_params
       params.require(:brand).permit(:first_name, :last_name, :company_name, :phone_number, :website)

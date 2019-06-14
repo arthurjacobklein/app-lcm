@@ -4,11 +4,12 @@ class UsersController < ApplicationController
 
 
   def show
+    @user = User.find(params[:id])
   end
 
   def update
     respond_to do |format|
-     if @user.update(post_params)
+     if @user.update(user_params)
        format.html { redirect_to @user, notice: 'user was successfully updated.' }
        format.js
      else
