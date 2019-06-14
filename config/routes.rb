@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+
+  resources :contacts
+  resources :about, only: [:index]
+
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   namespace :admin do
@@ -9,18 +13,18 @@ Rails.application.routes.draw do
       resources :orders
       resources :order_items
       resources :products
-
       root to: "brands#index"
     end
   devise_for :brands
   resources :brands do
     resources :products
-  end 
+  end
 
   namespace :user do
     root :to => "products#index"
   end
 
+  resources :charges
   resources :home, only: [:index]
 
   root to: 'home#index'
@@ -38,8 +42,7 @@ Rails.application.routes.draw do
 
   resources :products
   resources :order_items
-  resources :cart, only: [:show]
-  
+  resource :cart, only: [:show]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
-
